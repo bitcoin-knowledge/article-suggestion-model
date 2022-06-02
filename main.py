@@ -23,9 +23,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+def run():
+    app.run(host="0.0.0.0", port=8080)
+
+
 @app.get("/")
 def read_root():
     return "Article Suggestion online"
+
 
 @app.post("/suggest_article")
 def ask_bot(query: Query):
