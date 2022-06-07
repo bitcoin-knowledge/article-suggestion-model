@@ -120,7 +120,7 @@ def suggest_article(user_input):
     "Main Function"
 
     root = Path(__file__).parent.parent
-    data_path = f"{root}//bitcoin_articles.json"
+    data_path = f"{root}/bitcoin_articles.json"
 
     btc = wrangle_jsonl(data_path)
     btc2 = userinput(user_input, btc)
